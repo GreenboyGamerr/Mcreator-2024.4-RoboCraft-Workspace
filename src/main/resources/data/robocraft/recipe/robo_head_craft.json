@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bbb",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_block"
+    },
+    "b": {
+      "item": "minecraft:blackstone"
+    }
+  },
+  "result": {
+    "id": "robocraft:robot_head",
+    "count": 1
+  }
+}

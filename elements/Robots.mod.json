@@ -1,0 +1,11 @@
+{
+  "_fv": 73,
+  "_type": "tab",
+  "definition": {
+    "name": "Robots",
+    "icon": {
+      "value": "Blocks.CARVED_PUMPKIN"
+    },
+    "showSearch": false
+  }
+}

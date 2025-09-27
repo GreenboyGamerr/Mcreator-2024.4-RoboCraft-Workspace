@@ -1,0 +1,48 @@
+{
+  "_fv": 73,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.REDSTONE_BLOCK"
+      },
+      {
+        "value": "CUSTOM:RobotHead"
+      },
+      {
+        "value": "Blocks.REDSTONE_BLOCK"
+      },
+      {
+        "value": "Blocks.IRON_BLOCK"
+      },
+      {
+        "value": "CUSTOM:RobotWires"
+      },
+      {
+        "value": "Blocks.IRON_BLOCK"
+      },
+      {
+        "value": "Blocks.IRON_BLOCK"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.IRON_BLOCK"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:MiniRobot.spawn_egg"
+    },
+    "name": "mini_robot_craft",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "robocraft:block/boss_activator"
+    },
+    "facing=east": {
+      "model": "robocraft:block/boss_activator",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "robocraft:block/boss_activator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "robocraft:block/boss_activator",
+      "y": 270
+    }
+  }
+}

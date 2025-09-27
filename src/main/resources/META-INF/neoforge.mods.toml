@@ -1,0 +1,42 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="robocraft"
+version="1.0.5"
+displayName="RoboCraft"
+displayURL="https://idonthaveanywebsite:).com"
+logoFile="logo.png"
+credits="By GreenBoyGamerr"
+authors="GreenboyGamerr"
+description="This Mod Adds Futuristic Robots To Minecraft"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.robocraft]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.65,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.robocraft]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.robocraft]]
+    modId="geckolib"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

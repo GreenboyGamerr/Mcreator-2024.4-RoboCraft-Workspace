@@ -1,0 +1,173 @@
+{
+  "_fv": 73,
+  "_type": "animatedentity",
+  "definition": {
+    "mobName": "Titan Defender Robot Suit",
+    "mobLabel": "",
+    "mobModelTexture": "violenttitan.png",
+    "mobModelGlowTexture": "",
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "entityDataEntries": [],
+    "modelWidth": 0.6,
+    "modelHeight": 5.0,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 1.7,
+    "stepHeight": 1.2,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -16711936,
+      "falpha": 0.0
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Robots"
+      }
+    ],
+    "isBoss": false,
+    "bossBarColor": "BLUE",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 45,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 123.0,
+    "movementSpeed": 0.4,
+    "armorBaseValue": 13.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 900,
+    "xpAmount": 20,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "deathTime": 25,
+    "lerp": 4,
+    "disableCollisions": false,
+    "ridable": true,
+    "canControlForward": true,
+    "canControlStrafe": true,
+    "immuneToFire": true,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": true,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": true,
+    "immuneToTrident": true,
+    "immuneToAnvil": true,
+    "immuneToWither": true,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": "Blocks.HEAVY_CORE"
+    },
+    "livingSound": {
+      "value": ""
+    },
+    "hurtSound": {
+      "value": "entity.generic.hurt"
+    },
+    "deathSound": {
+      "value": "entity.generic.death"
+    },
+    "stepSound": {
+      "value": "CUSTOM:robotwalking"
+    },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "DefenderRobotSuitOnEntityTickUpdate"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:EnemyTitanBoss</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:EnemyTitanBoss2</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:EnemyTitanPhase3</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:CurruptedRobo</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "defenderrobo.geo.json",
+    "groupName": "",
+    "animation1": "idle",
+    "animation2": "walking",
+    "animation3": "die",
+    "animation4": "attack",
+    "animation5": "",
+    "animation6": "",
+    "animation7": "",
+    "animation8": "",
+    "animation9": "",
+    "animation10": "",
+    "enable2": true,
+    "enable3": true,
+    "enable4": true,
+    "enable5": false,
+    "enable6": false,
+    "enable7": false,
+    "enable8": false,
+    "enable9": false,
+    "enable10": false,
+    "breedable": false,
+    "tameable": false,
+    "disableDeathRotation": true,
+    "headMovement": false,
+    "eyeHeight": false,
+    "breedTriggerItems": [
+      {
+        "value": "Blocks.REDSTONE_BLOCK"
+      }
+    ],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "height": 1.0,
+    "attackRate": 7,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 1,
+    "mobSpawningType": "creature",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:carved_pumpkin"
+    },
+    "b": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "id": "robocraft:titan_summoner",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "spawners": {
+    "type": "robocraft:robot_with_wheels",
+    "weight": 20,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "robotwalking": {
+    "sounds": [
+      {
+        "name": "robocraft:robot-pasos-81483",
+        "stream": false
+      }
+    ]
+  }
+}
