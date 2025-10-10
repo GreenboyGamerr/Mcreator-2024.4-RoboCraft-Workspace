@@ -1,0 +1,6 @@
+{
+  "parent": "mechafront:displaysettings/waraxe.item",
+  "textures": {
+    "layer0": "mechafront:item/sword"
+  }
+}

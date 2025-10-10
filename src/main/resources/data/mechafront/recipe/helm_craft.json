@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond_helmet"
+    },
+    "b": {
+      "item": "minecraft:netherite_helmet"
+    }
+  },
+  "result": {
+    "id": "mechafront:heroic_armor_helmet",
+    "count": 1
+  }
+}

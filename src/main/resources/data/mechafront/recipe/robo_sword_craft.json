@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond_sword"
+    },
+    "b": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "id": "mechafront:robo_sword",
+    "count": 1
+  }
+}

@@ -7,7 +7,7 @@
     },
     "showParticles": true,
     "actionSound": {
-      "value": "entity.arrow.shoot"
+      "value": "item.firecharge.use"
     },
     "igniteFire": true,
     "power": 1.0,

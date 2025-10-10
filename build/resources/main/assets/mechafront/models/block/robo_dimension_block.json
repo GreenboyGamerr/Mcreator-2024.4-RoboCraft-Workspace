@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/black_shulker_box",
+    "up": "minecraft:block/black_shulker_box",
+    "north": "mechafront:block/robot",
+    "east": "minecraft:block/black_shulker_box",
+    "south": "minecraft:block/black_shulker_box",
+    "west": "minecraft:block/black_shulker_box",
+    "particle": "minecraft:block/black_shulker_box"
+  },
+  "render_type": "solid"
+}

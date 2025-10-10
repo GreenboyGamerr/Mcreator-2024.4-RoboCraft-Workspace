@@ -1,6 +1,0 @@
-{
-  "parent": "robocraft:displaysettings/waraxe.item",
-  "textures": {
-    "layer0": "robocraft:item/sword"
-  }
-}

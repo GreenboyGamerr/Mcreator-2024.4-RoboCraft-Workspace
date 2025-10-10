@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "mechafront:block/robots_dimension_portal_ew"
+    },
+    "axis=x": {
+      "model": "mechafront:block/robots_dimension_portal_ns"
+    }
+  }
+}

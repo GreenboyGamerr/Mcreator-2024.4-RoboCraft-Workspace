@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "b": {
+      "item": "minecraft:redstone_torch"
+    }
+  },
+  "result": {
+    "id": "mechafront:robot_wires",
+    "count": 1
+  }
+}

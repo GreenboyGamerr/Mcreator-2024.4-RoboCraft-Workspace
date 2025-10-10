@@ -40,7 +40,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:DefenderRobotSuit.spawn_egg"
+      "value": "CUSTOM:RobotDefenderSuit.spawn_egg"
     },
     "name": "defender_robot_suit_craft",
     "namespace": "mod"

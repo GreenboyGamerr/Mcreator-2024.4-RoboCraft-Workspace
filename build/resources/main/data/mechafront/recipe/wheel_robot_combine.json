@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "mechafront:mini_robot_spawn_egg"
+    },
+    "b": {
+      "item": "minecraft:minecart"
+    }
+  },
+  "result": {
+    "id": "mechafront:robot_with_wheels_spawn_egg",
+    "count": 1
+  }
+}

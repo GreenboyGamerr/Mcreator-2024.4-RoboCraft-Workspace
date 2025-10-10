@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a",
+    "b "
+  ],
+  "key": {
+    "a": {
+      "item": "mechafront:robots_dimension"
+    },
+    "b": {
+      "item": "minecraft:flint_and_steel"
+    }
+  },
+  "result": {
+    "id": "mechafront:robots_dimension",
+    "count": 1
+  }
+}

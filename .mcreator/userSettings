@@ -2,8 +2,14 @@
   "workspacePanelIconSize": "TILES",
   "workspacePanelSortType": "CREATED",
   "workspacePanelSortAscending": true,
-  "projectBrowserSplitPos": 142,
+  "projectBrowserSplitPos": 0,
   "projectBrowserState": {
-    "expandedPaths": []
+    "expandedPaths": [
+      "[, RoboCraft]",
+      "[, RoboCraft, Resources (Gradle)]",
+      "[, RoboCraft, Resources (Gradle), C:\\Users\\Lenovo\\MCreatorWorkspaces\\robocraft\\src\\main\\resources\\assets]",
+      "[, RoboCraft, Resources (Gradle), C:\\Users\\Lenovo\\MCreatorWorkspaces\\robocraft\\src\\main\\resources\\assets, C:\\Users\\Lenovo\\MCreatorWorkspaces\\robocraft\\src\\main\\resources\\assets\\robocraft]",
+      "[, RoboCraft, Resources (Gradle), C:\\Users\\Lenovo\\MCreatorWorkspaces\\robocraft\\src\\main\\resources\\assets, C:\\Users\\Lenovo\\MCreatorWorkspaces\\robocraft\\src\\main\\resources\\assets\\robocraft, C:\\Users\\Lenovo\\MCreatorWorkspaces\\robocraft\\src\\main\\resources\\assets\\robocraft\\animations]"
+    ]
   }
 }

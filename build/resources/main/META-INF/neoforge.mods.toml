@@ -3,9 +3,9 @@ loaderVersion="[4,)"
 license="All Rights Reserved"
 
 [[mods]]
-modId="robocraft"
-version="1.0.5"
-displayName="RoboCraft"
+modId="mechafront"
+version="2.0"
+displayName="MechaFront"
 displayURL="https://idonthaveanywebsite:).com"
 logoFile="logo.png"
 credits="By GreenBoyGamerr"
@@ -15,14 +15,14 @@ description="This Mod Adds Futuristic Robots To Minecraft"
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
-[[dependencies.robocraft]]
+[[dependencies.mechafront]]
     modId="neoforge"
     type="required"
     versionRange="[21.1.65,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.robocraft]]
+[[dependencies.mechafront]]
     modId="minecraft"
     type="required"
     versionRange="[1.21.1]"
@@ -30,7 +30,7 @@ description="This Mod Adds Futuristic Robots To Minecraft"
     side="BOTH"
 
 
-[[dependencies.robocraft]]
+[[dependencies.mechafront]]
     modId="geckolib"
     type="optional"
     versionRange="[0,)"

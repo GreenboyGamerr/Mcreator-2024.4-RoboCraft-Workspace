@@ -1,0 +1,15 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Shoot Cannon",
+    "keyBindingCategoryKey": "mechaverse",
+    "onKeyPressed": {
+      "name": "ShootCannonOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ShootCannonOnKeyReleased"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_block"
+    },
+    "b": {
+      "item": "mechafront:robot_head"
+    }
+  },
+  "result": {
+    "id": "mechafront:robo_dimension_block",
+    "count": 1
+  }
+}

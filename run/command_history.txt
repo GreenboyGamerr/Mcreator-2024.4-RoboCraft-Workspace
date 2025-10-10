@@ -1,43 +1,50 @@
 /kill @e
-/summon robocraft:currupted_robo
-/summon robocraft:flying_robot
+/gamerule doMobSpawning false
+/kill @e
 /time set day
-/locate biome plains
-/tp @s 686 82 230
-/kill @e[type=robocraft:titan_robot]
-/kill @e[type=robocraft:enemy_titan_boss]
-/kill @e[type=robocraft:enemy_titan_boss_2]
-/kill @e[type=robocraft:enemy_titan_boss]
-/kill @e[type=robocraft:enemy_titan_phase_3
-/kill @e[type=robocraft:enemy_titan_phase_3]
-/kill @e[type=robocraft:defender_robot_suit]
-/kill @e[type=robocraft:mini_robot]
-/kill @e[type=robocraft:]
-/kill @e[type=robocraft:combat_robo]
-/kill @e[type=robocraft:robot_dog]
-/kill @e[type=robocraft:currupted_robo]
 /locate structure robocraft:robot_bunker
-/tp @s 816 ~ 800
-/locate structure robocraft:robot_bunker
-/tp @s 816 ~ 800
-/tp 324 ~ 321
-/tp 100~ 321
-/tp 1000 ~ 321
-/locate structure robocraft:robot_bunker
-/tp @s 816 ~ 800
-/tp @s 5000 ~ 5000
-/locate structure robocraft:robot_bunker
-/tp @s 4208 ~ 5184
+/kill @e
+/place structure robocraft:robot_bunker
+/give @p minecraft:structure_block
 /time set day
 /tick freeze
-/kill @e[type=robocraft:currupted_robo]
-/tick freeze
+/tp
+/tp @e[type=robocraft:robot_golem] Dev
 /tick unfreeze
 /tick freeze
-/tp @e[type=robocraft:titan_robot] Dev
-/team add ro
-/team join ro @e
-/team modify ro friendlyFire false
 /tick unfreeze
+/tp @e[type=robocraft:robot_golem] Dev
+/tick unfreeze
+/tp @e[type=robocraft:robot_golem] Dev
+/tick unfreeze
+/tp @e[type=robocraft:robot_golem] Dev
+/tick freeze
+/tp @e[type=robocraft:robot_golem] Dev
+/tick unfreeze
+/tick freeze
+/tick unfreeze
+/ill
+/kill
 /time set day
-/effect give @p strength 1000000 5 true
+/give @p minecraft:structure_block
+/time set day
+/weather clear
+/time set day
+/weather clear
+/time setd ay
+/time set day
+/time set night
+/time set day
+/setworldspawn
+/effect give @p minecraft:resistance 1000000 255 true
+/time set day
+/locate structure robocraft:robo_city
+/locate structure robocraft:robot_bunker
+/tp @s 32 ~ -192
+/locate structure robocraft:robo_city
+/tp @s -256 ~ 80
+/locate structure robocraft:robo_city
+/tp @s -640 ~ -272
+/locate structure robocraft:robo_city
+/tp @s 3840 ~ 5232
+/tick freeze
