@@ -1,0 +1,48 @@
+{
+  "_fv": 73,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:RobotWires"
+      },
+      {
+        "value": "Blocks.GLASS"
+      },
+      {
+        "value": "CUSTOM:RobotWires"
+      },
+      {
+        "value": "Blocks.GOLD_BLOCK"
+      },
+      {
+        "value": "CUSTOM:RobotCore"
+      },
+      {
+        "value": "Blocks.GOLD_BLOCK"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.GOLD_BLOCK"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:MechaSuitBasic.spawn_egg"
+    },
+    "name": "mecha_suit_2",
+    "namespace": "mod"
+  }
+}

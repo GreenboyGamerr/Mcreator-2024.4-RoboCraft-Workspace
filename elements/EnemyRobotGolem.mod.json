@@ -13,8 +13,8 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelWidth": 1.0,
+    "modelHeight": 2.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
@@ -76,9 +76,9 @@
     "canControlForward": false,
     "canControlStrafe": false,
     "immuneToFire": true,
-    "immuneToArrows": true,
-    "immuneToFallDamage": false,
-    "immuneToCactus": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
     "immuneToDrowning": true,
     "immuneToLightning": false,
     "immuneToPotions": false,
@@ -92,7 +92,7 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:robots"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"

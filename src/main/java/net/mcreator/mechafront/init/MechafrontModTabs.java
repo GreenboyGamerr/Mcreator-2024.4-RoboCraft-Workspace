@@ -25,11 +25,14 @@ public class MechafrontModTabs {
 				tabData.accept(MechafrontModItems.TITAN_ROBOT_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.ENEMY_TITAN_BOSS_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.CURRUPTED_ROBO_SPAWN_EGG.get());
+				tabData.accept(MechafrontModItems.DESTROYER_ROBOT_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.ROBOT_WITH_WHEELS_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.ROBOT_DEFENDER_SUIT_SPAWN_EGG.get());
+				tabData.accept(MechafrontModItems.ROBOTIC_GHAST_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.FLYING_ROBOT_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.ROBOT_GOLEM_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.ENEMY_ROBOT_GOLEM_SPAWN_EGG.get());
+				tabData.accept(MechafrontModItems.ROBOT_CAT_SPAWN_EGG.get());
 				tabData.accept(MechafrontModItems.ROBO_SWORD.get());
 				tabData.accept(MechafrontModBlocks.BOSS_ACTIVATOR.get().asItem());
 				tabData.accept(MechafrontModBlocks.TITAN_SUMMONER.get().asItem());
@@ -42,5 +45,7 @@ public class MechafrontModTabs {
 				tabData.accept(MechafrontModItems.HEROIC_ARMOR_BOOTS.get());
 				tabData.accept(MechafrontModBlocks.ROBO_DIMENSION_BLOCK.get().asItem());
 				tabData.accept(MechafrontModItems.ROBOTS_DIMENSION.get());
+				tabData.accept(MechafrontModItems.MECHA_SUIT_BASIC_SPAWN_EGG.get());
+				tabData.accept(MechafrontModItems.MECHA_SUIT_MEDIUM_SPAWN_EGG.get());
 			}).build());
 }

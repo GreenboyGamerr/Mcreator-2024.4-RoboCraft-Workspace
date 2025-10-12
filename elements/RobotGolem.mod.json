@@ -76,9 +76,9 @@
     "canControlForward": false,
     "canControlStrafe": false,
     "immuneToFire": true,
-    "immuneToArrows": true,
-    "immuneToFallDamage": false,
-    "immuneToCactus": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
     "immuneToDrowning": true,
     "immuneToLightning": false,
     "immuneToPotions": false,
@@ -92,7 +92,7 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:robots"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"

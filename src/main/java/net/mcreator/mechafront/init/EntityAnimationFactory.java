@@ -5,16 +5,21 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.mcreator.mechafront.entity.TitanRobotEntity;
+import net.mcreator.mechafront.entity.RoboticGhastEntity;
 import net.mcreator.mechafront.entity.RobotWithWheelsEntity;
 import net.mcreator.mechafront.entity.RobotGolemEntity;
 import net.mcreator.mechafront.entity.RobotDogEntity;
 import net.mcreator.mechafront.entity.RobotDefenderSuitEntity;
+import net.mcreator.mechafront.entity.RobotCatEntity;
 import net.mcreator.mechafront.entity.MiniRobotEntity;
+import net.mcreator.mechafront.entity.MechaSuitMediumEntity;
+import net.mcreator.mechafront.entity.MechaSuitBasicEntity;
 import net.mcreator.mechafront.entity.FlyingRobotEntity;
 import net.mcreator.mechafront.entity.EnemyTitanPhase3Entity;
 import net.mcreator.mechafront.entity.EnemyTitanBossEntity;
 import net.mcreator.mechafront.entity.EnemyTitanBoss2Entity;
 import net.mcreator.mechafront.entity.EnemyRobotGolemEntity;
+import net.mcreator.mechafront.entity.DestroyerRobotEntity;
 import net.mcreator.mechafront.entity.CurruptedRoboEntity;
 import net.mcreator.mechafront.entity.CombatRoboEntity;
 
@@ -108,6 +113,41 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof EnemyRobotGolemEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof RobotCatEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DestroyerRobotEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof RoboticGhastEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MechaSuitBasicEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MechaSuitMediumEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

@@ -106,6 +106,11 @@ public class EnemyTitanBoss2Entity extends Monster implements GeoEntity {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mechafront:robots"));
+	}
+
+	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
 		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.break")), 0.15f, 1);
 	}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mechafront:enemy_base",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 28,
+    "separation": 25,
+    "salt": 425640636
+  }
+}

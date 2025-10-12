@@ -18,6 +18,7 @@ public class MechafrontModVariables {
 	public static double Y = 0;
 	public static double Z = 0;
 	public static double flight2 = 0;
+	public static double wait = 0;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {

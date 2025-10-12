@@ -6,5 +6,79 @@
         "stream": false
       }
     ]
+  },
+  "enemy_titanfightingtitan": {
+    "sounds": [
+      {
+        "name": "mechafront:enemytitanmiddlefight",
+        "stream": false
+      }
+    ]
+  },
+  "enemytitan_useless": {
+    "sounds": [
+      {
+        "name": "mechafront:uselessthings",
+        "stream": false
+      }
+    ]
+  },
+  "enemytosemi": {
+    "sounds": [
+      {
+        "name": "mechafront:semititangolemenemytitan",
+        "stream": false
+      }
+    ]
+  },
+  "enemydied": {
+    "sounds": [
+      {
+        "name": "mechafront:enemytitandied",
+        "stream": false
+      }
+    ]
+  },
+  "titan_to_enemy": {
+    "sounds": [
+      {
+        "name": "mechafront:titantoenemytian",
+        "stream": false
+      }
+    ]
+  },
+  "titan_littletoys": {
+    "sounds": [
+      {
+        "name": "mechafront:littletoystitan",
+        "stream": false
+      }
+    ]
+  },
+  "titan_to_enemysemi": {
+    "sounds": [
+      {
+        "name": "mechafront:semititantitan",
+        "stream": false
+      }
+    ]
+  },
+  "robots": {
+    "subtitle": "subtitles.robots",
+    "sounds": [
+      {
+        "name": "mechafront:robotsounds",
+        "stream": false
+      }
+    ]
+  },
+  "titans": {
+    "subtitle": "subtitles.titans",
+    "sounds": [
+      {
+        "name": "mechafront:titan",
+        "stream": false
+      }
+    ]
   }
 }

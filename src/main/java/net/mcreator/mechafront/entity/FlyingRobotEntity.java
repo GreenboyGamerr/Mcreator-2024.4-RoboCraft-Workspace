@@ -176,10 +176,11 @@ public class FlyingRobotEntity extends TamableAnimal implements GeoEntity {
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, EnemyTitanBossEntity.class, false, false));
 		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, EnemyTitanPhase3Entity.class, false, false));
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, EnemyTitanBoss2Entity.class, false, false));
-		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, CurruptedRoboEntity.class, false, false));
-		this.goalSelector.addGoal(11, new FollowOwnerGoal(this, 1, (float) 10, (float) 2));
-		this.goalSelector.addGoal(12, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(13, new OwnerHurtTargetGoal(this));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, EnemyRobotGolemEntity.class, false, false));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, CurruptedRoboEntity.class, false, false));
+		this.goalSelector.addGoal(12, new FollowOwnerGoal(this, 1, (float) 10, (float) 2));
+		this.goalSelector.addGoal(13, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(14, new OwnerHurtTargetGoal(this));
 	}
 
 	@Override
@@ -190,6 +191,11 @@ public class FlyingRobotEntity extends TamableAnimal implements GeoEntity {
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
 		this.spawnAtLocation(new ItemStack(MechafrontModItems.ROBOT_CORE.get()));
+	}
+
+	@Override
+	public SoundEvent getAmbientSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mechafront:robots"));
 	}
 
 	@Override

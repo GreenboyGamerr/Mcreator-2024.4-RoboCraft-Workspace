@@ -7,6 +7,9 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:old_growth_birch_forest": "2025-10-10 14:42:39 +0500",
+      "minecraft:forest": "2025-10-10 14:52:42 +0500",
+      "minecraft:windswept_forest": "2025-10-10 14:42:43 +0500",
       "minecraft:sunflower_plains": "2025-09-14 21:45:02 +0500",
       "minecraft:river": "2025-10-09 11:53:17 +0500",
       "minecraft:windswept_hills": "2025-09-14 21:44:40 +0500",
@@ -459,12 +462,6 @@
     },
     "done": true
   },
-  "robocraft:final_fight": {
-    "criteria": {
-      "final_fight_0": "2025-09-14 22:12:44 +0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/lever": {
     "criteria": {
       "has_cobblestone": "2025-09-14 22:13:59 +0500"
@@ -784,6 +781,96 @@
   "minecraft:recipes/redstone/tnt": {
     "criteria": {
       "has_gunpowder": "2025-10-09 13:48:53 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/netherite_block": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_boots_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_shovel_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_chestplate_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_sword_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_leggings_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_axe_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_hoe_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_pickaxe_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lodestone": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_helmet_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-10-10 14:51:56 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_banner": {
+    "criteria": {
+      "has_white_wool": "2025-10-10 14:53:06 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_bed": {
+    "criteria": {
+      "has_white_wool": "2025-10-10 14:53:06 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_carpet": {
+    "criteria": {
+      "has_white_wool": "2025-10-10 14:53:06 +0500"
+    },
+    "done": true
+  },
+  "mechafront:final_fight": {
+    "criteria": {
+      "final_fight_0": "2025-10-10 15:09:19 +0500"
     },
     "done": true
   },

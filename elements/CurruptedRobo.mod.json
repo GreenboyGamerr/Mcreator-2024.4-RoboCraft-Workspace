@@ -92,7 +92,7 @@
       "value": "CUSTOM:RobotCore"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:robots"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"

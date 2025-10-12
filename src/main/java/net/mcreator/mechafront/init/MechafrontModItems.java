@@ -46,6 +46,11 @@ public class MechafrontModItems {
 	public static final DeferredItem<Item> ENEMY_ROBOT_GOLEM_SPAWN_EGG = REGISTRY.register("enemy_robot_golem_spawn_egg", () -> new DeferredSpawnEggItem(MechafrontModEntities.ENEMY_ROBOT_GOLEM, -6710887, -3407872, new Item.Properties()));
 	public static final DeferredItem<Item> ROBO_DIMENSION_BLOCK = block(MechafrontModBlocks.ROBO_DIMENSION_BLOCK);
 	public static final DeferredItem<Item> ROBOTS_DIMENSION = REGISTRY.register("robots_dimension", RobotsDimensionItem::new);
+	public static final DeferredItem<Item> ROBOT_CAT_SPAWN_EGG = REGISTRY.register("robot_cat_spawn_egg", () -> new DeferredSpawnEggItem(MechafrontModEntities.ROBOT_CAT, -10066330, -16724788, new Item.Properties()));
+	public static final DeferredItem<Item> DESTROYER_ROBOT_SPAWN_EGG = REGISTRY.register("destroyer_robot_spawn_egg", () -> new DeferredSpawnEggItem(MechafrontModEntities.DESTROYER_ROBOT, -6710887, -10092544, new Item.Properties()));
+	public static final DeferredItem<Item> ROBOTIC_GHAST_SPAWN_EGG = REGISTRY.register("robotic_ghast_spawn_egg", () -> new DeferredSpawnEggItem(MechafrontModEntities.ROBOTIC_GHAST, -3355444, -1, new Item.Properties()));
+	public static final DeferredItem<Item> MECHA_SUIT_BASIC_SPAWN_EGG = REGISTRY.register("mecha_suit_basic_spawn_egg", () -> new DeferredSpawnEggItem(MechafrontModEntities.MECHA_SUIT_BASIC, -13421773, -3355648, new Item.Properties()));
+	public static final DeferredItem<Item> MECHA_SUIT_MEDIUM_SPAWN_EGG = REGISTRY.register("mecha_suit_medium_spawn_egg", () -> new DeferredSpawnEggItem(MechafrontModEntities.MECHA_SUIT_MEDIUM, -13421773, -16737895, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

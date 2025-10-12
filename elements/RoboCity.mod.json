@@ -9,8 +9,8 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 20,
-    "separation": 10,
+    "spacing": 25,
+    "separation": 12,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Robotsbioms"

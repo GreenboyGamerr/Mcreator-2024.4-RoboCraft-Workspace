@@ -53,7 +53,7 @@ public record ShootCannonMessage(int eventType, int pressedms) implements Custom
 			return;
 		if (type == 0) {
 
-			ShootCannonOnKeyPressedProcedure.execute();
+			ShootCannonOnKeyPressedProcedure.execute(world, entity);
 		}
 		if (type == 1) {
 

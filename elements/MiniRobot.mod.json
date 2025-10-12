@@ -92,7 +92,7 @@
       "value": "Items.NETHERITE_INGOT"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:robots"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"

@@ -16,7 +16,6 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -105,6 +104,11 @@ public class RobotGolemEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mechafront:robots"));
+	}
+
+	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
 		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mechafront:robotwalking")), 0.15f, 1);
 	}
@@ -123,7 +127,9 @@ public class RobotGolemEntity extends Monster implements GeoEntity {
 	public boolean hurt(DamageSource source, float amount) {
 		if (source.is(DamageTypes.IN_FIRE))
 			return false;
-		if (source.getDirectEntity() instanceof AbstractArrow)
+		if (source.is(DamageTypes.FALL))
+			return false;
+		if (source.is(DamageTypes.CACTUS))
 			return false;
 		if (source.is(DamageTypes.DROWN))
 			return false;

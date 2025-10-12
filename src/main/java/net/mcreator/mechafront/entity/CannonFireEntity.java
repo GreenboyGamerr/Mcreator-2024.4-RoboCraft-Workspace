@@ -5,6 +5,8 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -19,6 +21,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.mechafront.procedures.CannonFireProjectileHitsBlockProcedure;
 import net.mcreator.mechafront.init.MechafrontModEntities;
 
 import javax.annotation.Nullable;
@@ -70,6 +73,18 @@ public class CannonFireEntity extends AbstractArrow implements ItemSupplier {
 				livingEntity.push(vec3.x, 0.1, vec3.z);
 			}
 		}
+	}
+
+	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		CannonFireProjectileHitsBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		CannonFireProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mechafront:abandoned_flop_mecha",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 81,
+    "separation": 80,
+    "salt": 293895629
+  }
+}

@@ -20,16 +20,22 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.mechafront.entity.TitanRobotEntity;
+import net.mcreator.mechafront.entity.TNTCannonEntity;
+import net.mcreator.mechafront.entity.RoboticGhastEntity;
 import net.mcreator.mechafront.entity.RobotWithWheelsEntity;
 import net.mcreator.mechafront.entity.RobotGolemEntity;
 import net.mcreator.mechafront.entity.RobotDogEntity;
 import net.mcreator.mechafront.entity.RobotDefenderSuitEntity;
+import net.mcreator.mechafront.entity.RobotCatEntity;
 import net.mcreator.mechafront.entity.MiniRobotEntity;
+import net.mcreator.mechafront.entity.MechaSuitMediumEntity;
+import net.mcreator.mechafront.entity.MechaSuitBasicEntity;
 import net.mcreator.mechafront.entity.FlyingRobotEntity;
 import net.mcreator.mechafront.entity.EnemyTitanPhase3Entity;
 import net.mcreator.mechafront.entity.EnemyTitanBossEntity;
 import net.mcreator.mechafront.entity.EnemyTitanBoss2Entity;
 import net.mcreator.mechafront.entity.EnemyRobotGolemEntity;
+import net.mcreator.mechafront.entity.DestroyerRobotEntity;
 import net.mcreator.mechafront.entity.CurruptedRoboEntity;
 import net.mcreator.mechafront.entity.CombatRoboEntity;
 import net.mcreator.mechafront.entity.CannonFireEntity;
@@ -61,11 +67,23 @@ public class MechafrontModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<EnemyTitanPhase3Entity>> ENEMY_TITAN_PHASE_3 = register("enemy_titan_phase_3",
 			EntityType.Builder.<EnemyTitanPhase3Entity>of(EnemyTitanPhase3Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<RobotDefenderSuitEntity>> ROBOT_DEFENDER_SUIT = register("robot_defender_suit",
-			EntityType.Builder.<RobotDefenderSuitEntity>of(RobotDefenderSuitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 2.2f));
+			EntityType.Builder.<RobotDefenderSuitEntity>of(RobotDefenderSuitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2.6f));
 	public static final DeferredHolder<EntityType<?>, EntityType<RobotGolemEntity>> ROBOT_GOLEM = register("robot_golem",
 			EntityType.Builder.<RobotGolemEntity>of(RobotGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnemyRobotGolemEntity>> ENEMY_ROBOT_GOLEM = register("enemy_robot_golem",
-			EntityType.Builder.<EnemyRobotGolemEntity>of(EnemyRobotGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<EnemyRobotGolemEntity>of(EnemyRobotGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<RobotCatEntity>> ROBOT_CAT = register("robot_cat",
+			EntityType.Builder.<RobotCatEntity>of(RobotCatEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<DestroyerRobotEntity>> DESTROYER_ROBOT = register("destroyer_robot",
+			EntityType.Builder.<DestroyerRobotEntity>of(DestroyerRobotEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<TNTCannonEntity>> TNT_CANNON = register("tnt_cannon",
+			EntityType.Builder.<TNTCannonEntity>of(TNTCannonEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<RoboticGhastEntity>> ROBOTIC_GHAST = register("robotic_ghast",
+			EntityType.Builder.<RoboticGhastEntity>of(RoboticGhastEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(2f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MechaSuitBasicEntity>> MECHA_SUIT_BASIC = register("mecha_suit_basic",
+			EntityType.Builder.<MechaSuitBasicEntity>of(MechaSuitBasicEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2.6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MechaSuitMediumEntity>> MECHA_SUIT_MEDIUM = register("mecha_suit_medium",
+			EntityType.Builder.<MechaSuitMediumEntity>of(MechaSuitMediumEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2.6f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -93,6 +111,11 @@ public class MechafrontModEntities {
 		RobotDefenderSuitEntity.init(event);
 		RobotGolemEntity.init(event);
 		EnemyRobotGolemEntity.init(event);
+		RobotCatEntity.init(event);
+		DestroyerRobotEntity.init(event);
+		RoboticGhastEntity.init(event);
+		MechaSuitBasicEntity.init(event);
+		MechaSuitMediumEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -110,5 +133,10 @@ public class MechafrontModEntities {
 		event.put(ROBOT_DEFENDER_SUIT.get(), RobotDefenderSuitEntity.createAttributes().build());
 		event.put(ROBOT_GOLEM.get(), RobotGolemEntity.createAttributes().build());
 		event.put(ENEMY_ROBOT_GOLEM.get(), EnemyRobotGolemEntity.createAttributes().build());
+		event.put(ROBOT_CAT.get(), RobotCatEntity.createAttributes().build());
+		event.put(DESTROYER_ROBOT.get(), DestroyerRobotEntity.createAttributes().build());
+		event.put(ROBOTIC_GHAST.get(), RoboticGhastEntity.createAttributes().build());
+		event.put(MECHA_SUIT_BASIC.get(), MechaSuitBasicEntity.createAttributes().build());
+		event.put(MECHA_SUIT_MEDIUM.get(), MechaSuitMediumEntity.createAttributes().build());
 	}
 }

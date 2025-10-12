@@ -92,7 +92,7 @@
       "value": "Blocks.HEAVY_CORE"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:robots"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"

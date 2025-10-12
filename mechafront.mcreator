@@ -148,18 +148,6 @@
       }
     },
     {
-      "name": "DogRoboCraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dog_robo_craft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/mechafront/recipe/dog_robo_craft.json"
-        ]
-      }
-    },
-    {
       "name": "EnemyTitanBoss",
       "type": "animatedentity",
       "compiles": true,
@@ -532,18 +520,6 @@
       }
     },
     {
-      "name": "WheelRobotCombine",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wheel_robot_combine",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/mechafront/recipe/wheel_robot_combine.json"
-        ]
-      }
-    },
-    {
       "name": "FlyingRobot",
       "type": "animatedentity",
       "compiles": true,
@@ -877,7 +853,16 @@
         "files": [
           "src/main/java/net/mcreator/mechafront/procedures/ShootCannonOnKeyPressedProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -1133,6 +1118,283 @@
           "src/main/resources/data/mechafront/recipe/igniter_craft.json"
         ]
       }
+    },
+    {
+      "name": "CannonFireProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cannon_fire_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/procedures/CannonFireProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RobotCat",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robot_cat",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mechafront/neoforge/biome_modifier/robot_cat_biome_modifier.json",
+          "src/main/java/net/mcreator/mechafront/entity/model/RobotCatModel.java",
+          "src/main/resources/assets/mechafront/models/item/robot_cat_spawn_egg.json",
+          "src/main/java/net/mcreator/mechafront/client/renderer/RobotCatRenderer.java",
+          "src/main/java/net/mcreator/mechafront/entity/RobotCatEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "DestroyerRobot",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destroyer_robot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/entity/DestroyerRobotEntity.java",
+          "src/main/resources/assets/mechafront/models/item/destroyer_robot_spawn_egg.json",
+          "src/main/java/net/mcreator/mechafront/client/renderer/DestroyerRobotRenderer.java",
+          "src/main/java/net/mcreator/mechafront/entity/model/DestroyerRobotModel.java",
+          "src/main/resources/data/mechafront/neoforge/biome_modifier/destroyer_robot_biome_modifier.json"
+        ]
+      }
+    },
+    {
+      "name": "TNTCannon",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tnt_cannon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/entity/TNTCannonEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TNTCannonProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tnt_cannon_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/procedures/TNTCannonProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RoboticGhast",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robotic_ghast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/entity/model/RoboticGhastModel.java",
+          "src/main/java/net/mcreator/mechafront/client/renderer/RoboticGhastRenderer.java",
+          "src/main/resources/data/mechafront/neoforge/biome_modifier/robotic_ghast_biome_modifier.json",
+          "src/main/resources/assets/mechafront/models/item/robotic_ghast_spawn_egg.json",
+          "src/main/java/net/mcreator/mechafront/entity/RoboticGhastEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TrappedRobot",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trapped_robot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mechafront/worldgen/structure_set/trapped_robot.json",
+          "src/main/resources/data/mechafront/worldgen/template_pool/trapped_robot.json",
+          "src/main/resources/data/mechafront/worldgen/structure/trapped_robot.json"
+        ]
+      }
+    },
+    {
+      "name": "UnderGroundEnemyBase",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "under_ground_enemy_base",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mechafront/worldgen/structure_set/under_ground_enemy_base.json",
+          "src/main/resources/data/mechafront/worldgen/structure/under_ground_enemy_base.json",
+          "src/main/resources/data/mechafront/worldgen/template_pool/under_ground_enemy_base.json"
+        ]
+      }
+    },
+    {
+      "name": "EnemyBase",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enemy_base",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mechafront/worldgen/template_pool/enemy_base.json",
+          "src/main/resources/data/mechafront/worldgen/structure_set/enemy_base.json",
+          "src/main/resources/data/mechafront/worldgen/structure/enemy_base.json"
+        ]
+      }
+    },
+    {
+      "name": "ShoulderCannon",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shoulder_cannon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/network/ShoulderCannonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "Shuldercannonkeypress",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shuldercannonkeypress",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/procedures/ShuldercannonkeypressProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShoulderCannonOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shoulder_cannon_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/procedures/ShoulderCannonOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "MechaSuitBasic",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mecha_suit_basic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/entity/MechaSuitBasicEntity.java",
+          "src/main/java/net/mcreator/mechafront/client/renderer/MechaSuitBasicRenderer.java",
+          "src/main/resources/assets/mechafront/models/item/mecha_suit_basic_spawn_egg.json",
+          "src/main/java/net/mcreator/mechafront/entity/model/MechaSuitBasicModel.java"
+        ]
+      }
+    },
+    {
+      "name": "MechaSuitMedium",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mecha_suit_medium",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mechafront/client/renderer/MechaSuitMediumRenderer.java",
+          "src/main/resources/assets/mechafront/models/item/mecha_suit_medium_spawn_egg.json",
+          "src/main/java/net/mcreator/mechafront/entity/MechaSuitMediumEntity.java",
+          "src/main/java/net/mcreator/mechafront/entity/model/MechaSuitMediumModel.java"
+        ]
+      }
+    },
+    {
+      "name": "AbandonedFlopMecha",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abandoned_flop_mecha",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mechafront/worldgen/structure/abandoned_flop_mecha.json",
+          "src/main/resources/data/mechafront/worldgen/structure_set/abandoned_flop_mecha.json",
+          "src/main/resources/data/mechafront/worldgen/template_pool/abandoned_flop_mecha.json"
+        ]
+      }
+    },
+    {
+      "name": "MechaSuit2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mecha_suit_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mechafront/recipe/mecha_suit_2.json"
+        ]
+      }
+    },
+    {
+      "name": "MechaSuit3",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mecha_suit_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mechafront/recipe/mecha_suit_3.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1171,6 +1433,12 @@
       "type": "number",
       "scope": "global",
       "value": "0"
+    },
+    {
+      "name": "wait",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1181,6 +1449,78 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "enemy_titanfightingtitan",
+      "files": [
+        "enemytitanmiddlefight"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "enemytitan_useless",
+      "files": [
+        "uselessthings"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "enemytosemi",
+      "files": [
+        "semititangolemenemytitan"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "enemydied",
+      "files": [
+        "enemytitandied"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "titan_to_enemy",
+      "files": [
+        "titantoenemytian"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "titan_littletoys",
+      "files": [
+        "littletoystitan"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "titan_to_enemysemi",
+      "files": [
+        "semititantitan"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "robots",
+      "files": [
+        "robotsounds"
+      ],
+      "category": "neutral",
+      "subtitle": "Robots Sounds"
+    },
+    {
+      "name": "titans",
+      "files": [
+        "titan"
+      ],
+      "category": "neutral",
+      "subtitle": "Sound Of Titan"
     }
   ],
   "tag_elements": {
@@ -1210,11 +1550,14 @@
       "TitanRobot",
       "EnemyTitanBoss",
       "CurruptedRobo",
+      "DestroyerRobot",
       "RobotWithWheels",
       "RobotDefenderSuit",
+      "RoboticGhast",
       "FlyingRobot",
       "RobotGolem",
       "EnemyRobotGolem",
+      "RobotCat",
       "RoboSword",
       "BossActivator",
       "TitanSummoner",
@@ -1223,100 +1566,122 @@
       "RobotWires",
       "HeroicArmor",
       "RoboDimensionBlock",
-      "RobotsDimension"
+      "RobotsDimension",
+      "MechaSuitBasic",
+      "MechaSuitMedium"
     ]
   },
   "language_map": {
     "en_us": {
-      "entity.mechafront.enemy_titan_phase_3": "Boss Titan Robot (Phase3)",
-      "entity.robocraft.enemy_titan_phase_3": "Boss Titan Robot (Phase3)",
-      "item.mechafront.combat_robo_spawn_egg": "Combat Robot Spawn Egg",
-      "entity.robocraft.robot_dog": "Robot Dog",
+      "item.mechafront.mecha_suit_basic_spawn_egg": "Mecha Defender Suit (Basic) Spawn Egg",
       "entity.robocraft.currupted_robo": "Currupted Robo",
       "item.mechafront.flying_robot_spawn_egg": "Flying Robot Spawn Egg",
       "entity.mechafront.enemy_titan_boss_2": "Boss Titan Robot (Phase2)",
+      "item.mechafront.mecha_suit_medium_spawn_egg": "Mecha Defender Suit (Medium) Spawn Egg",
       "entity.mechafront.titan_robot": "Titan Robot",
       "item.robocraft.enemy_titan_phase_3_spawn_egg": "Boss Titan Robot (Phase3) Spawn Egg",
       "item.mechafront.robot_head": "Robot Head",
-      "item.robocraft.robot_core": "Titan Core",
-      "item.mechafront.enemy_titan_boss_spawn_egg": "Boss Titan Robot (Phase1) Spawn Egg",
-      "item_group.robocraft.robots": "Robots",
-      "item.robocraft.heroic_armor_boots": "Heroic Armor Boots",
       "entity.robocraft.mini_robot": "Mini Robot",
-      "entity.mechafront.currupted_robo": "Currupted Robo",
+      "subtitles.enemydied": "",
       "item.robocraft.robot_defender_suit_spawn_egg": "Robot Defender Suit Spawn Egg",
       "item.robocraft.currupted_robo_spawn_egg": "Currupted Robo Spawn Egg",
       "entity.robocraft.defender_robot_suit": "Titan Defender Robot Suit",
-      "item.robocraft.heroic_armor_helmet": "Heroic Armor Helmet",
       "biome.robocraft.robotsbioms": "Robotsbioms",
       "item.robocraft.heroic_armor_leggings": "Heroic Armor Leggings",
       "item.robocraft.robot_with_wheels_spawn_egg": "Wheel Robot Spawn Egg",
-      "item.mechafront.robot_wires": "Robot Wires",
       "item.mechafront.heroic_armor_chestplate": "Heroic Armor Chestplate",
-      "key.mechafront.shoot_cannon": "Shoot Cannon",
+      "item.mechafront.robot_wires": "Robot Wires",
       "entity.robocraft.combat_robo": "Combat Robot",
-      "gui.mechafront.mini_robo_inv.label_minirobotinventory": "MiniRobotInventory",
-      "advancements.final_fight.title": "Final Fight",
+      "subtitles.enemytitan_useless": "",
       "item.mechafront.robo_sword": "Robo Sword",
-      "item.robocraft.mini_robot_spawn_egg": "Mini Robot Spawn Egg",
-      "item_group.mechafront.robots": "Robots",
+      "entity.mechafront.robotic_ghast": "Robotic Ghast",
       "entity.robocraft.enemy_titan_boss_2": "Boss Titan Robot (Phase2)",
-      "item.mechafront.mini_robot_spawn_egg": "Mini Robot Spawn Egg",
-      "item.robocraft.robot_wires": "Robot Wires",
-      "biome.mechafront.robotsbioms": "Robotsbioms",
-      "entity.robocraft.robot_golem": "Robot Golem",
       "item.mechafront.titan_robot_spawn_egg": "Titan Robot Spawn Egg",
-      "entity.robocraft.robot_with_wheels": "Wheel Robot",
       "item.mechafront.enemy_titan_boss_2_spawn_egg": "Boss Titan Robot (Phase2) Spawn Egg",
-      "entity.robocraft.flying_robot": "Flying Robot",
+      "item.mechafront.destroyer_robot_spawn_egg": "Destroyer Robot Spawn Egg",
       "item.robocraft.titan_robot_spawn_egg": "Titan Robot Spawn Egg",
-      "item.robocraft.robot_head": "Robot Head",
-      "item.mechafront.robot_dog_spawn_egg": "Robot Dog Spawn Egg",
-      "item.robocraft.heroic_armor_chestplate": "Heroic Armor Chestplate",
+      "item.mechafront.robotic_ghast_spawn_egg": "Robotic Ghast Spawn Egg",
       "entity.robocraft.titan_robot": "Titan Robot",
       "entity.mechafront.robot_dog": "Robot Dog",
       "item.mechafront.robot_defender_suit_spawn_egg": "Robot Defender Suit Spawn Egg",
       "item.robocraft.enemy_titan_boss_2_spawn_egg": "Boss Titan Robot (Phase2) Spawn Egg",
       "item.mechafront.robot_core": "Titan Core",
-      "item.mechafront.heroic_armor_leggings": "Heroic Armor Leggings",
       "key.robocraft.shoot_cannon": "Shoot Cannon",
-      "item.robocraft.robots_dimension": "Robots Dimension Portal Igniter",
-      "item.robocraft.enemy_robot_golem_spawn_egg": "Enemy Robot Semi-Titan Spawn Egg",
-      "block.mechafront.boss_activator": "Boss Activator",
-      "block.robocraft.titan_summoner": "Titan Summoner",
+      "entity.mechafront.mecha_suit_basic": "Mecha Defender Suit (Basic)",
       "item.mechafront.enemy_robot_golem_spawn_egg": "Enemy Robot Semi-Titan Spawn Egg",
-      "item.robocraft.robot_dog_spawn_egg": "Robot Dog Spawn Egg",
-      "item.robocraft.defender_robot_suit_spawn_egg": "Titan Defender Robot Suit Spawn Egg",
       "item.robocraft.enemy_titan_boss_spawn_egg": "Boss Titan Robot (Phase1) Spawn Egg",
-      "advancements.the_true_ruler.title": "The True Ruler",
+      "item.robocraft.defender_robot_suit_spawn_egg": "Titan Defender Robot Suit Spawn Egg",
       "entity.mechafront.enemy_robot_golem": "Enemy Robot Semi-Titan",
-      "entity.mechafront.combat_robo": "Combat Robot",
-      "entity.mechafront.mini_robot": "Mini Robot",
-      "advancements.the_true_ruler.descr": "Defeat Enemy Titan",
-      "entity.mechafront.enemy_titan_boss": "Boss Titan Robot (Phase1)",
       "advancements.final_fight.descr": "Summon The Titan Boss",
-      "item.robocraft.flying_robot_spawn_egg": "Flying Robot Spawn Egg",
       "item.robocraft.combat_robo_spawn_egg": "Combat Robot Spawn Egg",
-      "block.robocraft.robo_dimension_block": "Robo Dimension Block",
-      "block.mechafront.titan_summoner": "Titan Summoner",
       "item.mechafront.enemy_titan_phase_3_spawn_egg": "Boss Titan Robot (Phase3) Spawn Egg",
-      "entity.robocraft.robot_defender_suit": "Robot Defender Suit",
+      "block.mechafront.titan_summoner": "Titan Summoner",
       "item.mechafront.robot_golem_spawn_egg": "Robot Golem Spawn Egg",
-      "item.mechafront.heroic_armor_boots": "Heroic Armor Boots",
       "entity.mechafront.robot_defender_suit": "Robot Defender Suit",
-      "entity.robocraft.enemy_robot_golem": "Enemy Robot Semi-Titan",
-      "entity.mechafront.flying_robot": "Flying Robot",
       "block.mechafront.robo_dimension_block": "Robo Dimension Block",
       "item.robocraft.robo_sword": "Robo Sword",
       "item.mechafront.robot_with_wheels_spawn_egg": "Wheel Robot Spawn Egg",
       "entity.mechafront.robot_with_wheels": "Wheel Robot",
       "gui.robocraft.mini_robo_inv.label_minirobotinventory": "MiniRobotInventory",
-      "entity.mechafront.robot_golem": "Robot Golem",
+      "subtitles.titan_littletoys": "",
+      "item.mechafront.robot_cat_spawn_egg": "Robot Cat Spawn Egg",
       "entity.robocraft.enemy_titan_boss": "Boss Titan Robot (Phase1)",
       "block.robocraft.boss_activator": "Boss Activator",
-      "item.mechafront.heroic_armor_helmet": "Heroic Armor Helmet",
       "subtitles.robotwalking": "",
       "item.mechafront.robots_dimension": "Robots Dimension Portal Igniter",
+      "subtitles.titan_to_enemysemi": "",
+      "subtitles.titan_to_enemy": "",
+      "entity.mechafront.enemy_titan_phase_3": "Boss Titan Robot (Phase3)",
+      "entity.robocraft.enemy_titan_phase_3": "Boss Titan Robot (Phase3)",
+      "subtitles.enemytosemi": "",
+      "item.mechafront.combat_robo_spawn_egg": "Combat Robot Spawn Egg",
+      "entity.robocraft.robot_dog": "Robot Dog",
+      "item.robocraft.robot_core": "Titan Core",
+      "item.mechafront.enemy_titan_boss_spawn_egg": "Boss Titan Robot (Phase1) Spawn Egg",
+      "subtitles.enemy_titanfightingtitan": "",
+      "item_group.robocraft.robots": "Robots",
+      "item.robocraft.heroic_armor_boots": "Heroic Armor Boots",
+      "entity.mechafront.currupted_robo": "Currupted Robo",
+      "item.robocraft.heroic_armor_helmet": "Heroic Armor Helmet",
+      "key.mechafront.shoot_cannon": "Shoot Cannon",
+      "gui.mechafront.mini_robo_inv.label_minirobotinventory": "MiniRobotInventory",
+      "advancements.final_fight.title": "Final Fight",
+      "item.robocraft.mini_robot_spawn_egg": "Mini Robot Spawn Egg",
+      "item_group.mechafront.robots": "Robots",
+      "item.mechafront.mini_robot_spawn_egg": "Mini Robot Spawn Egg",
+      "entity.mechafront.mecha_suit_medium": "Mecha Defender Suit (Medium)",
+      "item.robocraft.robot_wires": "Robot Wires",
+      "biome.mechafront.robotsbioms": "Robotsbioms",
+      "entity.robocraft.robot_golem": "Robot Golem",
+      "entity.robocraft.robot_with_wheels": "Wheel Robot",
+      "entity.robocraft.flying_robot": "Flying Robot",
+      "item.robocraft.robot_head": "Robot Head",
+      "item.mechafront.robot_dog_spawn_egg": "Robot Dog Spawn Egg",
+      "item.robocraft.heroic_armor_chestplate": "Heroic Armor Chestplate",
+      "item.mechafront.heroic_armor_leggings": "Heroic Armor Leggings",
+      "item.robocraft.robots_dimension": "Robots Dimension Portal Igniter",
+      "item.robocraft.enemy_robot_golem_spawn_egg": "Enemy Robot Semi-Titan Spawn Egg",
+      "block.mechafront.boss_activator": "Boss Activator",
+      "subtitles.titans": "Sound Of Titan",
+      "block.robocraft.titan_summoner": "Titan Summoner",
+      "subtitles.robots": "Robots Sounds",
+      "item.robocraft.robot_dog_spawn_egg": "Robot Dog Spawn Egg",
+      "advancements.the_true_ruler.title": "The True Ruler",
+      "entity.mechafront.combat_robo": "Combat Robot",
+      "entity.mechafront.mini_robot": "Mini Robot",
+      "entity.mechafront.robot_cat": "Robot Cat",
+      "advancements.the_true_ruler.descr": "Defeat Enemy Titan",
+      "entity.mechafront.enemy_titan_boss": "Boss Titan Robot (Phase1)",
+      "item.robocraft.flying_robot_spawn_egg": "Flying Robot Spawn Egg",
+      "block.robocraft.robo_dimension_block": "Robo Dimension Block",
+      "entity.robocraft.robot_defender_suit": "Robot Defender Suit",
+      "item.mechafront.heroic_armor_boots": "Heroic Armor Boots",
+      "entity.mechafront.flying_robot": "Flying Robot",
+      "entity.robocraft.enemy_robot_golem": "Enemy Robot Semi-Titan",
+      "entity.mechafront.destroyer_robot": "Destroyer Robot",
+      "entity.mechafront.robot_golem": "Robot Golem",
+      "item.mechafront.heroic_armor_helmet": "Heroic Armor Helmet",
+      "key.mechafront.shoulder_cannon": "Shoot From Shoulder Cannon",
       "item.robocraft.robot_golem_spawn_egg": "Robot Golem Spawn Egg",
       "item.mechafront.currupted_robo_spawn_egg": "Currupted Robo Spawn Egg"
     }
@@ -1328,7 +1693,7 @@
   "workspaceSettings": {
     "modid": "mechafront",
     "modName": "MechaFront",
-    "version": "2.0",
+    "version": "3.5",
     "description": "This Mod Adds Futuristic Robots To Minecraft",
     "author": "GreenboyGamerr",
     "websiteURL": "https://idonthaveanywebsite:).com",
