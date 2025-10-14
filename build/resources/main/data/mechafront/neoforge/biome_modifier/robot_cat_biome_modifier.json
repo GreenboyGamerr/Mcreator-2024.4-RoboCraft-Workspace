@@ -4,7 +4,7 @@
   "spawners": {
     "type": "mechafront:robot_cat",
     "weight": 20,
-    "minCount": 2,
-    "maxCount": 3
+    "minCount": 5,
+    "maxCount": 7
   }
 }

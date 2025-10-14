@@ -1,26 +1,3 @@
-/weather clear
-/time set day
-/give @p mechafront:robot_cat_spawn_egg
-/summon minecraft:firework_rocket
-/kill
-/ki
-/advancement grant @p only mechafront:the_true_ruler
-/advancement revoke @p everything
-/advancement grant @p only mechafront:the_true_ruler
-/ill
-/kill
-/time set day
-/kill
-/gamerule doMobSpawning false
-/kill
-/kill @e
-/give @p structure_block
-/time set day
-/give @p structure_block
-/time set day
-/locate structure mechafront:enemy_base
-/tp @s 144 ~ 128
-/locate structure mechafront:trapped_robot
 /tp @s 176 ~ 128
 /locate structure mechafront:under_ground_enemy_base
 /tp @s 80 ~ 96
@@ -48,3 +25,26 @@
 /tp @s -736 ~ -736
 /locate structure mechafront:under_ground_enemy_base
 /tp @s -736 ~ 0
+/locate structure mechafront:trapped_robot
+/place structure mechafront:robo_city
+/place structure mechafront:trapped_robot
+/place structure mechafront:robot_bunker
+/place structure mechafront:abandoned_flop_mecha
+/place structure mechafront:enemy_base
+/time set day
+/weather clear
+/gamerule doDaylightCycle false
+/weather clear
+/setworldspaw
+/setworldspawn
+/locate structure mechafront:abandoned_flop_mecha
+/tp @s 0 ~ -1296
+/locate structure mechafront:enemy_base
+/tp @s -432 ~ -1312
+/locate structure mechafront:robo_city
+/tp @s -752 ~ -1408
+/locate structure mechafront:under_ground_enemy_base
+/tp @s -736 ~ -1472
+/locate structure mechafront:robot_bunker
+/tp @s -1824 ~ -2128
+/tick rate 100

@@ -162,8 +162,8 @@
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "creature",
-    "minNumberOfMobsPerGroup": 2,
-    "maxNumberOfMobsPerGroup": 3,
+    "minNumberOfMobsPerGroup": 5,
+    "maxNumberOfMobsPerGroup": 7,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Robotsbioms"
