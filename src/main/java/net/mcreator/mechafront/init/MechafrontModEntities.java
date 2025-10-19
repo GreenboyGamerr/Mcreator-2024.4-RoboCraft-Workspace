@@ -53,7 +53,7 @@ public class MechafrontModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<TitanRobotEntity>> TITAN_ROBOT = register("titan_robot",
 			EntityType.Builder.<TitanRobotEntity>of(TitanRobotEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(2.5f, 5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnemyTitanBossEntity>> ENEMY_TITAN_BOSS = register("enemy_titan_boss",
-			EntityType.Builder.<EnemyTitanBossEntity>of(EnemyTitanBossEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 5f));
+			EntityType.Builder.<EnemyTitanBossEntity>of(EnemyTitanBossEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 5.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CannonFireEntity>> CANNON_FIRE = register("cannon_fire",
 			EntityType.Builder.<CannonFireEntity>of(CannonFireEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CurruptedRoboEntity>> CURRUPTED_ROBO = register("currupted_robo",
@@ -67,7 +67,7 @@ public class MechafrontModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<EnemyTitanPhase3Entity>> ENEMY_TITAN_PHASE_3 = register("enemy_titan_phase_3",
 			EntityType.Builder.<EnemyTitanPhase3Entity>of(EnemyTitanPhase3Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<RobotDefenderSuitEntity>> ROBOT_DEFENDER_SUIT = register("robot_defender_suit",
-			EntityType.Builder.<RobotDefenderSuitEntity>of(RobotDefenderSuitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2.6f));
+			EntityType.Builder.<RobotDefenderSuitEntity>of(RobotDefenderSuitEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2.6f));
 	public static final DeferredHolder<EntityType<?>, EntityType<RobotGolemEntity>> ROBOT_GOLEM = register("robot_golem",
 			EntityType.Builder.<RobotGolemEntity>of(RobotGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnemyRobotGolemEntity>> ENEMY_ROBOT_GOLEM = register("enemy_robot_golem",
@@ -83,7 +83,7 @@ public class MechafrontModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<MechaSuitBasicEntity>> MECHA_SUIT_BASIC = register("mecha_suit_basic",
 			EntityType.Builder.<MechaSuitBasicEntity>of(MechaSuitBasicEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.3f, 2.6f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MechaSuitMediumEntity>> MECHA_SUIT_MEDIUM = register("mecha_suit_medium",
-			EntityType.Builder.<MechaSuitMediumEntity>of(MechaSuitMediumEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.4f, 2.6f));
+			EntityType.Builder.<MechaSuitMediumEntity>of(MechaSuitMediumEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.4f, 2.6f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

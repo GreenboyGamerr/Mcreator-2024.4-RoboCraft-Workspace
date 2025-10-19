@@ -9,7 +9,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,7 +21,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.mechafront.network.MechafrontModVariables;
 import net.mcreator.mechafront.init.MechafrontModEntities;
-import net.mcreator.mechafront.entity.EnemyTitanBossEntity;
+import net.mcreator.mechafront.entity.EnemyTitanPhase3Entity;
 import net.mcreator.mechafront.entity.CannonFireEntity;
 import net.mcreator.mechafront.MechafrontMod;
 
@@ -32,16 +31,50 @@ public class Phase3TicksProcedure {
 			return;
 		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 			MechafrontModVariables.fight = MechafrontModVariables.fight + 1;
-			if (MechafrontModVariables.fight == 150) {
-				if (entity instanceof EnemyTitanBossEntity) {
-					((EnemyTitanBossEntity) entity).setAnimation("cannor");
+			if (MechafrontModVariables.fight == 100) {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = MechafrontModEntities.DESTROYER_ROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+					}
 				}
-				MechafrontMod.queueServerWork(15, () -> {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = MechafrontModEntities.DESTROYER_ROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = MechafrontModEntities.DESTROYER_ROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = MechafrontModEntities.DESTROYER_ROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = MechafrontModEntities.DESTROYER_ROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+					}
+				}
+				if (world instanceof Level _level && !_level.isClientSide())
+					_level.explode(null, x, y, z, 5, Level.ExplosionInteraction.TNT);
+			}
+			if (MechafrontModVariables.fight == 200) {
+				if (entity instanceof EnemyTitanPhase3Entity) {
+					((EnemyTitanPhase3Entity) entity).setAnimation("cannor");
+				}
+				MechafrontMod.queueServerWork(10, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1, false);
 						}
 					}
 					{
@@ -69,11 +102,223 @@ public class Phase3TicksProcedure {
 									};
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
+							}.getArrow(projectileLevel, 4, 4, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 2);
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1, false);
+						}
+					}
+					{
+						Entity _shootFrom = entity;
+						Level projectileLevel = _shootFrom.level();
+						if (!projectileLevel.isClientSide()) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
+									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
+										@Override
+										public byte getPierceLevel() {
+											return piercing;
+										}
+
+										@Override
+										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+											if (knockback > 0) {
+												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+												if (vec3.lengthSqr() > 0.0) {
+													livingEntity.push(vec3.x, 0.1, vec3.z);
+												}
+											}
+										}
+									};
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, 4, 4, (byte) 0);
+							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 1);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1, false);
+						}
+					}
+					{
+						Entity _shootFrom = entity;
+						Level projectileLevel = _shootFrom.level();
+						if (!projectileLevel.isClientSide()) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
+									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
+										@Override
+										public byte getPierceLevel() {
+											return piercing;
+										}
+
+										@Override
+										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+											if (knockback > 0) {
+												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+												if (vec3.lengthSqr() > 0.0) {
+													livingEntity.push(vec3.x, 0.1, vec3.z);
+												}
+											}
+										}
+									};
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
+							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 2);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1, false);
+						}
+					}
+					{
+						Entity _shootFrom = entity;
+						Level projectileLevel = _shootFrom.level();
+						if (!projectileLevel.isClientSide()) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
+									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
+										@Override
+										public byte getPierceLevel() {
+											return piercing;
+										}
+
+										@Override
+										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+											if (knockback > 0) {
+												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+												if (vec3.lengthSqr() > 0.0) {
+													livingEntity.push(vec3.x, 0.1, vec3.z);
+												}
+											}
+										}
+									};
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
+							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 3);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1, false);
+						}
+					}
+					{
+						Entity _shootFrom = entity;
+						Level projectileLevel = _shootFrom.level();
+						if (!projectileLevel.isClientSide()) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
+									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
+										@Override
+										public byte getPierceLevel() {
+											return piercing;
+										}
+
+										@Override
+										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+											if (knockback > 0) {
+												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+												if (vec3.lengthSqr() > 0.0) {
+													livingEntity.push(vec3.x, 0.1, vec3.z);
+												}
+											}
+										}
+									};
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
+							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 5);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 2, 1, false);
+						}
+					}
+					{
+						Entity _shootFrom = entity;
+						Level projectileLevel = _shootFrom.level();
+						if (!projectileLevel.isClientSide()) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
+									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
+										@Override
+										public byte getPierceLevel() {
+											return piercing;
+										}
+
+										@Override
+										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+											if (knockback > 0) {
+												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+												if (vec3.lengthSqr() > 0.0) {
+													livingEntity.push(vec3.x, 0.1, vec3.z);
+												}
+											}
+										}
+									};
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
+							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, -4);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
@@ -102,11 +347,13 @@ public class Phase3TicksProcedure {
 									};
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 1);
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, -2);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
@@ -135,11 +382,13 @@ public class Phase3TicksProcedure {
 									};
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, -1);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
@@ -168,11 +417,13 @@ public class Phase3TicksProcedure {
 									};
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 1);
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, -3);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
@@ -201,206 +452,23 @@ public class Phase3TicksProcedure {
 									};
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setSilent(true);
+									entityToSpawn.igniteForSeconds(100);
+									entityToSpawn.setCritArrow(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
+							}.getArrow(projectileLevel, 4, 1, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
-										@Override
-										public byte getPierceLevel() {
-											return piercing;
-										}
-
-										@Override
-										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
-											if (knockback > 0) {
-												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
-												if (vec3.lengthSqr() > 0.0) {
-													livingEntity.push(vec3.x, 0.1, vec3.z);
-												}
-											}
-										}
-									};
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 4);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
-										@Override
-										public byte getPierceLevel() {
-											return piercing;
-										}
-
-										@Override
-										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
-											if (knockback > 0) {
-												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
-												if (vec3.lengthSqr() > 0.0) {
-													livingEntity.push(vec3.x, 0.1, vec3.z);
-												}
-											}
-										}
-									};
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 1);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
-										@Override
-										public byte getPierceLevel() {
-											return piercing;
-										}
-
-										@Override
-										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
-											if (knockback > 0) {
-												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
-												if (vec3.lengthSqr() > 0.0) {
-													livingEntity.push(vec3.x, 0.1, vec3.z);
-												}
-											}
-										}
-									};
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
-										@Override
-										public byte getPierceLevel() {
-											return piercing;
-										}
-
-										@Override
-										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
-											if (knockback > 0) {
-												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
-												if (vec3.lengthSqr() > 0.0) {
-													livingEntity.push(vec3.x, 0.1, vec3.z);
-												}
-											}
-										}
-									};
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CannonFireEntity(MechafrontModEntities.CANNON_FIRE.get(), level) {
-										@Override
-										public byte getPierceLevel() {
-											return piercing;
-										}
-
-										@Override
-										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
-											if (knockback > 0) {
-												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
-												if (vec3.lengthSqr() > 0.0) {
-													livingEntity.push(vec3.x, 0.1, vec3.z);
-												}
-											}
-										}
-									};
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, 8, 1, (byte) 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 2);
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, -5);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
 				});
 			}
-			if (MechafrontModVariables.fight == 220) {
+			if (MechafrontModVariables.fight == 280) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 100, 255, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 6, false, false));
-			}
-			if (MechafrontModVariables.fight == 340) {
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = EntityType.TNT.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-					}
-				}
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = EntityType.TNT.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-					}
-				}
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = EntityType.TNT.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-					}
-				}
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 10, false, false));
 				MechafrontModVariables.fight = 0;
 			}
 		}

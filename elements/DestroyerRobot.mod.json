@@ -141,8 +141,8 @@
       "value": ""
     },
     "rangedItemType": "TNTCannon",
-    "rangedAttackInterval": 20,
-    "rangedAttackRadius": 10.0,
+    "rangedAttackInterval": 35,
+    "rangedAttackRadius": 30.0,
     "height": 1.0,
     "attackRate": 7,
     "raidSpawnsCount": [

@@ -1,13 +1,3 @@
-/tp @s 176 ~ 128
-/locate structure mechafront:under_ground_enemy_base
-/tp @s 80 ~ 96
-/tp 3294 ~ 2345
-/tp 7999 ~ 99999
-/locate structure mechafront:under_ground_enemy_base
-/tp @s 7360 ~ 99360
-/time set day
-/kill
-/time set day
 /tp 34576 ~ 34587
 /kill
 /tp 32497 ~ 324897
@@ -48,3 +38,13 @@
 /locate structure mechafront:robot_bunker
 /tp @s -1824 ~ -2128
 /tick rate 100
+/kill @e
+/summon mechafront:enemy_titan_boss
+/kill @e
+/time set day
+/summon mechafront:enemy_titan_boss
+/time set day
+/advancement revoke @p everything
+/summon warden
+/time set day
+/summon warden

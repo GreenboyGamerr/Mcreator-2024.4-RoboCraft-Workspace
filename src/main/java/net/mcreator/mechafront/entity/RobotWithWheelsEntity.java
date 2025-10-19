@@ -117,9 +117,11 @@ public class RobotWithWheelsEntity extends TamableAnimal implements GeoEntity {
 		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, EnemyTitanBoss2Entity.class, false, false));
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CurruptedRoboEntity.class, false, false));
 		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, EnemyRobotGolemEntity.class, false, false));
-		this.goalSelector.addGoal(11, new FollowOwnerGoal(this, 1, (float) 10, (float) 2));
-		this.goalSelector.addGoal(12, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(13, new OwnerHurtTargetGoal(this));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, DestroyerRobotEntity.class, false, false));
+		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, MechaSuitBasicEntity.class, false, false));
+		this.goalSelector.addGoal(13, new FollowOwnerGoal(this, 1, (float) 10, (float) 2));
+		this.goalSelector.addGoal(14, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(15, new OwnerHurtTargetGoal(this));
 	}
 
 	@Override

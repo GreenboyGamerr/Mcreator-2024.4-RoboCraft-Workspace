@@ -976,5 +976,17 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/gold_ingot_from_gold_block": {
+    "criteria": {
+      "has_gold_block": "2025-10-15 14:59:32 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/lapis_lazuli": {
+    "criteria": {
+      "has_lapis_block": "2025-10-15 14:59:38 +0500"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

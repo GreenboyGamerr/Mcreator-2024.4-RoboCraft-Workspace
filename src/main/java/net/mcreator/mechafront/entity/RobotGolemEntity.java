@@ -95,7 +95,8 @@ public class RobotGolemEntity extends Monster implements GeoEntity {
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, EnemyTitanBossEntity.class, false, false));
 		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, EnemyTitanBoss2Entity.class, false, false));
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, EnemyTitanPhase3Entity.class, false, false));
-		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, Monster.class, false, false));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, MechaSuitBasicEntity.class, false, false));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, Monster.class, false, false));
 	}
 
 	@Override

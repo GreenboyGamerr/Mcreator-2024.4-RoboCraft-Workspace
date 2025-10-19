@@ -101,18 +101,19 @@ public class EnemyTitanBossEntity extends Animal implements GeoEntity {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, CombatRoboEntity.class, false, false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, FlyingRobotEntity.class, false, false));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, MiniRobotEntity.class, false, false));
-		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, RobotGolemEntity.class, false, false));
-		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, RobotWithWheelsEntity.class, false, false));
-		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, TitanRobotEntity.class, false, false));
-		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, RobotCatEntity.class, false, false));
-		this.targetSelector.addGoal(14, new NearestAttackableTargetGoal(this, RoboticGhastEntity.class, false, false));
-		this.targetSelector.addGoal(15, new NearestAttackableTargetGoal(this, RobotDefenderSuitEntity.class, false, false));
-		this.targetSelector.addGoal(16, new NearestAttackableTargetGoal(this, MechaSuitMediumEntity.class, false, false));
-		this.targetSelector.addGoal(17, new NearestAttackableTargetGoal(this, MechaSuitBasicEntity.class, false, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, MechaSuitMediumEntity.class, false, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, RobotDefenderSuitEntity.class, false, false));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, CombatRoboEntity.class, false, false));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, FlyingRobotEntity.class, false, false));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, MiniRobotEntity.class, false, false));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, RobotGolemEntity.class, false, false));
+		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, RobotWithWheelsEntity.class, false, false));
+		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, TitanRobotEntity.class, false, false));
+		this.targetSelector.addGoal(14, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(15, new NearestAttackableTargetGoal(this, RobotCatEntity.class, false, false));
+		this.targetSelector.addGoal(16, new NearestAttackableTargetGoal(this, RoboticGhastEntity.class, false, false));
+		this.targetSelector.addGoal(17, new NearestAttackableTargetGoal(this, RobotDefenderSuitEntity.class, false, false));
+		this.targetSelector.addGoal(18, new NearestAttackableTargetGoal(this, MechaSuitMediumEntity.class, false, false));
 	}
 
 	@Override

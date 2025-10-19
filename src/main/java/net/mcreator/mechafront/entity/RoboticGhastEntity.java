@@ -134,6 +134,7 @@ public class RoboticGhastEntity extends TamableAnimal implements RangedAttackMob
 		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, EnemyTitanBoss2Entity.class, false, false));
 		this.targetSelector.addGoal(14, new NearestAttackableTargetGoal(this, EnemyTitanPhase3Entity.class, false, false));
 		this.targetSelector.addGoal(15, new NearestAttackableTargetGoal(this, DestroyerRobotEntity.class, false, false));
+		this.targetSelector.addGoal(16, new NearestAttackableTargetGoal(this, MechaSuitBasicEntity.class, false, false));
 		this.goalSelector.addGoal(1, new RoboticGhastEntity.RangedAttackGoal(this, 1.25, 15, 15f) {
 			@Override
 			public boolean canContinueToUse() {

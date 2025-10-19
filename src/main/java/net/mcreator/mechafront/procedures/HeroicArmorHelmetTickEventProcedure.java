@@ -14,7 +14,7 @@ public class HeroicArmorHelmetTickEventProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 10, 3, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 10, 3, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 10, 4, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 1, false, false));
 		world.addParticle(ParticleTypes.END_ROD, (entity.getX()), (entity.getY()), (entity.getZ()), 0, 0, 0);

@@ -122,7 +122,7 @@ public class DestroyerRobotEntity extends Animal implements RangedAttackMob, Geo
 		this.targetSelector.addGoal(16, new NearestAttackableTargetGoal(this, RobotDefenderSuitEntity.class, false, false));
 		this.targetSelector.addGoal(17, new NearestAttackableTargetGoal(this, RoboticGhastEntity.class, false, false));
 		this.goalSelector.addGoal(18, new AvoidEntityGoal<>(this, RobotCatEntity.class, (float) 12, 2, 3));
-		this.goalSelector.addGoal(1, new DestroyerRobotEntity.RangedAttackGoal(this, 1.25, 20, 10f) {
+		this.goalSelector.addGoal(1, new DestroyerRobotEntity.RangedAttackGoal(this, 1.25, 35, 30f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();

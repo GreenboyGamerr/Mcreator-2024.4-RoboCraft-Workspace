@@ -118,7 +118,9 @@ public class CombatRoboEntity extends TamableAnimal implements GeoEntity {
 		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, EnemyTitanBoss2Entity.class, false, false));
 		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, EnemyTitanPhase3Entity.class, false, false));
 		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, CurruptedRoboEntity.class, false, false));
-		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, EnemyRobotGolemEntity.class, false, false));
+		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, DestroyerRobotEntity.class, false, false));
+		this.targetSelector.addGoal(14, new NearestAttackableTargetGoal(this, EnemyRobotGolemEntity.class, false, false));
+		this.targetSelector.addGoal(15, new NearestAttackableTargetGoal(this, MechaSuitBasicEntity.class, false, false));
 	}
 
 	@Override
